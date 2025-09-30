@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>websites</title>
+  <link rel="stylesheet" href="sites.css">
+  <script defer src="sites.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>My Favorite Sites Manager</h1>
+      <p>Manage your favorite websites with ease</p>
+    </div>
+
+    <div class="form-section">
+      <div class="form-container">
+        <form id="siteForm">
+          <input type="hidden" id="siteId">
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Site Name</label>
+              <input type="text" id="name" placeholder="e.g. Google" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="score">Rating (0-10)</label>
+              <input type="number" id="score" placeholder="8" min="0" max="10" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group full-width">
+              <label for="url">Website URL</label>
+              <input type="text" id="url" placeholder="https://www.google.com" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group full-width">
+              <label for="image">Image URL</label>
+              <input type="text" id="image" placeholder="https://example.com/logo.png" required>
+            </div>
+          </div>
+
+          <button type="submit" class="submit-btn">Save Site</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="table-section">
+      <h2 style="text-align: center; margin-bottom: 20px; color: #495057;">Websites</h2>
+      <div class="table-container">
+        <table id="sitesTable">
+          <thead>
+            <tr>
+              <th>name</th>
+              <th>image</th>
+              <th>url</th>
+              <th>score</th>
+              <th>actions</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
